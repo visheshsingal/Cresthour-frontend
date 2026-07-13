@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: white;
+  color: black;
+  font-family: var(--font-inter), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), serif;
+}
+
+.btn-gold {
+  @apply bg-gold text-white px-8 py-3 rounded-none uppercase tracking-widest text-sm font-medium transition-all duration-300 hover:bg-gold-hover disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-outline-white {
+  @apply border border-white text-white px-8 py-3 rounded-none uppercase tracking-widest text-sm font-medium transition-all duration-300 hover:bg-white hover:text-black;
+}
+
+.btn-outline-dark {
+  @apply border border-black text-black px-8 py-3 rounded-none uppercase tracking-widest text-sm font-medium transition-all duration-300 hover:bg-black hover:text-white;
+}
+
+.container-custom {
+  @apply max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16;
+}
+
+.section-padding {
+  @apply py-24 lg:py-40;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.text-gold {
+  color: #C5A059;
+}
+
+.bg-gold {
+  background-color: #C5A059;
+}
+
+.border-gold {
+  border-color: #C5A059;
+}
