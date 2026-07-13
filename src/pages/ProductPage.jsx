@@ -9,8 +9,9 @@ import { useCart } from '../context/CartContext';
 import { useFavorites } from '../context/FavoritesContext';
 import { Star, Truck, Shield, Clock, Heart, Share2, Send, MessageSquare } from 'lucide-react';
 
-const ProductPage = () => {
-    const { id } = useParams();
+const ProductPage = ({ params }) => {
+    const routeParams = useParams();
+    const id = params?.id ?? routeParams?.id;
     const router = useRouter();
     const { addToCart } = useCart();
     const { toggleFavorite, isFavorite } = useFavorites();
@@ -25,6 +26,11 @@ const ProductPage = () => {
     const [isSubmittingReview, setIsSubmittingReview] = useState(false);
 
     useEffect(() => {
+        if (!id) {
+            setLoading(false);
+            return;
+        }
+
         const fetchProduct = async () => {
             try {
                 const res = await axios.get(`${API_BASE_URL}/products/${id}`);
