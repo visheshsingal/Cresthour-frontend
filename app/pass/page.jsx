@@ -19,15 +19,15 @@ export default function MonthlyPassPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white text-black py-16">
-      <div className="container-custom max-w-5xl space-y-16">
+    <div className="min-h-screen bg-white text-black py-10 sm:py-16">
+      <div className="container-custom max-w-5xl space-y-10 sm:space-y-16">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-5">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 text-gold text-xs font-black uppercase tracking-[0.25em]">
             <Sparkles size={14} /> Full Month Access
           </div>
-          <h1 className="text-4xl sm:text-6xl font-serif font-medium text-gray-950 leading-tight">
-            The Cresthour <br />
+          <h1 className="text-3xl sm:text-6xl font-serif font-medium text-gray-950 leading-tight">
+            The Cresthour <br className="hidden sm:block" />
             <span className="text-deepGreen italic">All-Access Monthly Pass</span>
           </h1>
           <p className="text-base sm:text-lg text-gray-600 font-light leading-relaxed">
@@ -37,7 +37,7 @@ export default function MonthlyPassPage() {
           <div className="pt-2 flex items-center justify-center">
             <button
               onClick={() => setIsModalOpen(true)}
-              className="px-8 py-4 bg-deepGreen hover:bg-deepGreen-dark text-white text-xs font-black uppercase tracking-[0.25em] shadow-xl shadow-deepGreen/20 transition-all transform hover:scale-105 flex items-center gap-2"
+              className="px-5 sm:px-8 py-4 bg-deepGreen hover:bg-deepGreen-dark text-white text-[10px] sm:text-xs font-black uppercase tracking-[0.18em] sm:tracking-[0.25em] shadow-xl shadow-deepGreen/20 transition-all transform hover:scale-105 flex items-center justify-center gap-2"
             >
               Get Monthly Pass Now • ₹800 <ArrowRight size={14} />
             </button>
@@ -45,8 +45,8 @@ export default function MonthlyPassPage() {
         </div>
 
         {/* Value Comparison Card */}
-        <div className="bg-gray-50 border border-gray-200 rounded-3xl p-8 shadow-sm">
-          <h3 className="font-serif font-bold text-gray-950 text-2xl text-center mb-8">
+        <div className="bg-gray-50 border border-gray-200 rounded-3xl p-5 sm:p-8 shadow-sm">
+          <h3 className="font-serif font-bold text-gray-950 text-xl sm:text-2xl text-center mb-6 sm:mb-8">
             Single Webinar vs All-Access Monthly Pass
           </h3>
           <div className="grid md:grid-cols-2 gap-8">
@@ -132,8 +132,8 @@ export default function MonthlyPassPage() {
         </div>
 
         {/* CTA Box */}
-        <div className="bg-gray-50 border border-gray-200 rounded-3xl p-10 text-center space-y-5">
-          <h3 className="text-3xl font-serif font-bold text-gray-950">
+        <div className="bg-gray-50 border border-gray-200 rounded-3xl p-5 sm:p-10 text-center space-y-5">
+          <h3 className="text-2xl sm:text-3xl font-serif font-bold text-gray-950">
             Ready to upgrade your tech & communication skills this month?
           </h3>
           <p className="text-xs sm:text-sm text-gray-600 font-light max-w-xl mx-auto">
@@ -141,7 +141,7 @@ export default function MonthlyPassPage() {
           </p>
           <button
             onClick={() => setIsModalOpen(true)}
-            className="px-8 py-4 bg-deepGreen hover:bg-deepGreen-dark text-white text-xs font-black uppercase tracking-[0.25em] shadow-xl transition-all"
+            className="px-5 sm:px-8 py-4 bg-deepGreen hover:bg-deepGreen-dark text-[10px] sm:text-xs font-black uppercase tracking-[0.15em] sm:tracking-[0.25em] shadow-xl transition-all"
           >
             Claim Your Monthly Pass For ₹800
           </button>

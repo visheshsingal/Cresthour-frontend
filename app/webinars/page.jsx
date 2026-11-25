@@ -66,12 +66,12 @@ export default function WebinarsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black py-12">
-      <div className="container-custom space-y-12">
+    <div className="min-h-screen bg-white text-black py-8 sm:py-12">
+      <div className="container-custom space-y-8 sm:space-y-12">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <span className="text-gold text-xs font-black uppercase tracking-[0.4em]">Live Sessions Catalog</span>
-          <h1 className="text-4xl sm:text-5xl font-serif font-medium text-gray-950">
+          <h1 className="text-3xl sm:text-5xl font-serif font-medium text-gray-950">
             Monthly Webinar Schedule
           </h1>
           <p className="text-sm sm:text-base text-gray-600 font-light leading-relaxed">
@@ -82,7 +82,7 @@ export default function WebinarsPage() {
           <div className="pt-2">
             <button
               onClick={openPassModal}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-deepGreen text-white text-xs font-black uppercase tracking-[0.2em] shadow-md hover:bg-deepGreen-dark transition-all transform hover:scale-105"
+              className="inline-flex max-w-full items-center justify-center gap-2 px-4 sm:px-6 py-3 rounded-full bg-deepGreen text-white text-[10px] sm:text-xs font-black uppercase tracking-[0.12em] sm:tracking-[0.2em] shadow-md hover:bg-deepGreen-dark transition-all"
             >
               <Sparkles size={14} className="text-gold" />
               Get All-Access Monthly Pass (4 Webinars for ₹800)
@@ -121,7 +121,7 @@ export default function WebinarsPage() {
         </div>
 
         {/* Webinars Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
           {filteredWebinars.map((w, index) => (
             <div
               key={w.id}
@@ -142,7 +142,7 @@ export default function WebinarsPage() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2 text-xs text-gray-500 mb-2">
+                <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500 mb-2">
                   <Calendar size={14} className="text-deepGreen" />
                   <span className="font-semibold text-gray-800">{w.date}</span>
                   <span>•</span>
@@ -170,14 +170,14 @@ export default function WebinarsPage() {
                 )}
               </div>
 
-              <div className="pt-4 border-t border-gray-100 flex items-center justify-between mt-auto">
+              <div className="pt-4 border-t border-gray-100 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mt-auto">
                 <div>
                   <span className="text-[10px] uppercase font-bold text-gray-400 block">Single Fee</span>
                   <span className="text-2xl font-serif font-bold text-deepGreen">₹{w.price}</span>
                   <span className="text-xs text-gray-400 line-through ml-1.5">₹{w.originalPrice}</span>
                 </div>
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center justify-between sm:justify-end gap-2">
                   <Link
                     href={`/webinars/${w.id}`}
                     className="px-3 py-2 text-xs font-semibold text-gray-700 hover:text-black hover:underline"
@@ -186,7 +186,7 @@ export default function WebinarsPage() {
                   </Link>
                   <button
                     onClick={() => openCheckout(w)}
-                    className="px-5 py-2.5 bg-deepGreen hover:bg-deepGreen-dark text-white rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-sm"
+                    className="px-4 sm:px-5 py-2.5 bg-deepGreen hover:bg-deepGreen-dark text-white rounded-xl text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all shadow-sm"
                   >
                     Book Seat
                   </button>

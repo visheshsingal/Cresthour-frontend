@@ -3,13 +3,13 @@ import { CheckCircle2, Terminal, Brain, ShieldCheck, Users, ArrowRight } from 'l
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white text-black py-16">
-      <div className="container-custom max-w-4xl space-y-16">
+    <div className="min-h-screen bg-white text-black py-10 sm:py-16">
+      <div className="container-custom max-w-4xl space-y-10 sm:space-y-16">
         {/* Hero */}
         <div className="text-center space-y-4">
           <span className="text-gold text-xs font-black uppercase tracking-[0.4em]">Our Mission</span>
-          <h1 className="text-4xl sm:text-6xl font-serif font-medium text-gray-950 leading-tight">
-            Bridging the gap between <br />
+          <h1 className="text-3xl sm:text-6xl font-serif font-medium text-gray-950 leading-tight">
+            Bridging the gap between <br className="hidden sm:block" />
             <span className="text-deepGreen italic">Code Logic</span> and <span className="text-gray-400">Interview Confidence.</span>
           </h1>
           <p className="text-base text-gray-600 font-light leading-relaxed max-w-2xl mx-auto">
@@ -29,7 +29,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="bg-gray-50 border border-gray-200 rounded-3xl p-8 space-y-4">
+          <div className="bg-gray-50 border border-gray-200 rounded-3xl p-5 sm:p-8 space-y-4">
             <h4 className="font-serif font-bold text-gray-950 text-lg">The Cresthour Philosophy</h4>
             <div className="space-y-3 text-xs text-gray-700">
               <div className="flex items-start gap-2.5">
@@ -49,7 +49,7 @@ export default function AboutPage() {
         </div>
 
         {/* The 4-Week Cohort System */}
-        <div className="border border-gray-200 rounded-3xl p-8 bg-white space-y-6">
+        <div className="border border-gray-200 rounded-3xl p-5 sm:p-8 bg-white space-y-6">
           <h3 className="text-2xl font-serif font-bold text-gray-950 text-center">
             How Our Monthly Cohorts Work
           </h3>

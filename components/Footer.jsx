@@ -104,9 +104,9 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="container-custom pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-white/60 font-light">
+      <div className="container-custom pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center text-xs text-white/60 font-light">
         <div>© {new Date().getFullYear()} Cresthour. Built with Next.js, Cloudinary & Razorpay.</div>
-        <div className="mt-3 sm:mt-0 space-x-6">
+        <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 sm:gap-x-6">
           <Link href="/about" className="hover:text-gold transition-colors">About</Link>
           <Link href="/webinars" className="hover:text-gold transition-colors">Webinars</Link>
           <Link href="/pass" className="hover:text-gold transition-colors">Monthly Pass</Link>

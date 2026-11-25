@@ -101,14 +101,17 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white text-black font-sans">
       {/* 1. FULL-BLEED HERO */}
-      <section className="relative min-h-[840px] overflow-hidden bg-deepGreen lg:min-h-[860px]">
+      <section className="relative min-h-[840px] overflow-hidden bg-gray-950 lg:min-h-[860px]">
+        {/* Full image clearly visible with a subtle dark tone */}
         <img
-          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2400&q=90"
+          src="https://images.pexels.com/photos/5926395/pexels-photo-5926395.jpeg"
           alt="Cresthour live cohort learning together"
-          className="absolute inset-0 h-full w-full object-cover object-[68%_center]"
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#f7f5ef] from-0% via-[#f7f5ef]/75 via-32% to-transparent via-65%" />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-black/20" />
+        {/* "Thoda sa dark" - Subtle dark tone letting the entire image show through */}
+        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20 pointer-events-none" />
 
         <div className="container-custom relative z-10 flex min-h-[840px] items-center pt-24 pb-16 lg:min-h-[860px] lg:pt-28">
           <motion.div
@@ -119,17 +122,17 @@ export default function HomePage() {
           >
             <div className="mb-7 flex items-center gap-4">
               <span className="h-px w-14 bg-gold" />
-              <span className="text-[10px] font-black uppercase tracking-[0.42em] text-deepGreen">
+              <span className="text-[10px] font-black uppercase tracking-[0.42em] text-gold">
                 Weekly live cohorts
               </span>
             </div>
 
-            <h1 className="text-[3.6rem] leading-[0.94] tracking-[-0.04em] text-gray-950 sm:text-7xl lg:text-[5.6rem]">
+            <h1 className="text-[3.6rem] leading-[0.94] tracking-[-0.04em] text-white sm:text-7xl lg:text-[5.6rem]">
               Speak code.<br />
-              <span className="italic text-deepGreen">Think clearly.</span>
+              <span className="italic text-gold">Think clearly.</span>
             </h1>
 
-            <p className="mt-7 max-w-[530px] text-base leading-7 text-gray-700 sm:text-lg">
+            <p className="mt-7 max-w-[530px] text-base leading-7 text-white/90 sm:text-lg">
               Learn practical coding, communicate your thinking with confidence, and become ready for real technical interviews.
             </p>
 
@@ -143,17 +146,17 @@ export default function HomePage() {
               </a>
               <button
                 onClick={openMonthlyPassCheckout}
-                className="flex items-center justify-center gap-2 border border-gray-950/20 bg-white/80 px-7 py-4 text-[11px] font-black uppercase tracking-[0.28em] text-gray-950 backdrop-blur-sm transition-all hover:border-gray-950 hover:bg-white"
+                className="flex items-center justify-center gap-2 border border-white/30 bg-white/10 px-7 py-4 text-[11px] font-black uppercase tracking-[0.28em] text-white backdrop-blur-sm transition-all hover:border-white hover:bg-white hover:text-gray-950"
               >
                 <Sparkles size={13} className="text-gold" /> Monthly pass · ₹800
               </button>
             </div>
 
-            <div className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-3 text-[10px] font-black uppercase tracking-[0.16em] text-gray-600">
+            <div className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-3 text-[10px] font-black uppercase tracking-[0.16em] text-white/80">
               <span className="flex items-center gap-2"><Calendar size={14} className="text-gold" /> Every Saturday</span>
-              <span className="h-4 w-px bg-gray-300" />
+              <span className="h-4 w-px bg-white/20" />
               <span className="flex items-center gap-2"><Clock size={14} className="text-gold" /> 7:00 PM IST</span>
-              <span className="h-4 w-px bg-gray-300" />
+              <span className="h-4 w-px bg-white/20" />
               <span className="flex items-center gap-2"><Video size={14} className="text-gold" /> Live online</span>
             </div>
           </motion.div>
@@ -181,12 +184,12 @@ export default function HomePage() {
       </section>
 
       {/* 2. UPCOMING WEBINARS FOR THIS MONTH (THE SCHEDULE) */}
-      <section id="schedule" className="py-24 bg-gray-50 border-y border-gray-200">
+      <section id="schedule" className="py-16 sm:py-24 bg-gray-50 border-y border-gray-200">
         <div className="container-custom">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-16">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 sm:mb-16">
             <div className="space-y-3">
               <span className="text-gold text-xs font-black uppercase tracking-[0.4em]">Monthly Calendar</span>
-              <h2 className="text-4xl sm:text-5xl font-serif font-medium text-gray-950">
+              <h2 className="text-3xl sm:text-5xl font-serif font-medium text-gray-950">
                 All 4 Live Sessions This Month
               </h2>
               <p className="text-sm text-gray-600 font-light max-w-xl">
@@ -201,7 +204,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {webinars.map((webinar, index) => (
               <div
                 key={webinar.id}
@@ -255,14 +258,14 @@ export default function HomePage() {
       </section>
 
       {/* 3. MONTHLY PASS BANNER (₹800 ALL-ACCESS) */}
-      <section className="py-20 bg-deepGreen text-white relative overflow-hidden">
+      <section className="py-14 sm:py-20 bg-deepGreen text-white relative overflow-hidden">
         <div className="container-custom">
           <div className="grid lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-gold text-xs font-black uppercase tracking-[0.2em]">
                 <Sparkles size={14} /> Best Value For Serious Learners
               </div>
-              <h2 className="text-4xl sm:text-5xl font-serif font-medium leading-tight">
+              <h2 className="text-3xl sm:text-5xl font-serif font-medium leading-tight">
                 The All-Access Monthly Pass: <br />
                 <span className="text-gold">4 Live Sessions for ₹800</span> (Save ~₹400)
               </h2>
@@ -289,7 +292,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="lg:col-span-4 flex flex-col items-center justify-center p-8 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-md text-center">
+            <div className="lg:col-span-4 flex flex-col items-center justify-center p-6 sm:p-8 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-md text-center">
               <span className="text-xs font-bold uppercase tracking-widest text-gold mb-1">Monthly Subscription</span>
               <div className="text-5xl font-serif font-bold text-white mb-1">₹800</div>
               <span className="text-xs text-white/60 line-through mb-4">Original Value ₹1,999</span>
@@ -306,11 +309,11 @@ export default function HomePage() {
       </section>
 
       {/* 4. DUAL SYNERGY FRAMEWORK */}
-      <section className="py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-white">
         <div className="container-custom">
-          <div className="text-center max-w-2xl mx-auto space-y-3 mb-16">
+          <div className="text-center max-w-2xl mx-auto space-y-3 mb-10 sm:mb-16">
             <span className="text-gold text-xs font-black uppercase tracking-[0.4em]">The Dual Synergy</span>
-            <h2 className="text-4xl sm:text-5xl font-serif font-medium text-gray-950">
+            <h2 className="text-3xl sm:text-5xl font-serif font-medium text-gray-950">
               Why Coding + Soft Skills Must Be Learned Together
             </h2>
             <p className="text-sm text-gray-600 font-light leading-relaxed">
@@ -320,7 +323,7 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Pillar 1 */}
-            <div className="border border-gray-200 rounded-3xl p-8 bg-gray-50/50 space-y-6">
+            <div className="border border-gray-200 rounded-3xl p-5 sm:p-8 bg-gray-50/50 space-y-6">
               <div className="flex items-center gap-3">
                 <div className="p-3 rounded-2xl bg-deepGreen/10 text-deepGreen">
                   <Terminal className="w-6 h-6" />
@@ -357,7 +360,7 @@ export default function HomePage() {
             </div>
 
             {/* Pillar 2 */}
-            <div className="border border-gray-200 rounded-3xl p-8 bg-gray-50/50 space-y-6">
+            <div className="border border-gray-200 rounded-3xl p-5 sm:p-8 bg-gray-50/50 space-y-6">
               <div className="flex items-center gap-3">
                 <div className="p-3 rounded-2xl bg-gold/10 text-gold">
                   <Brain className="w-6 h-6" />
@@ -428,7 +431,7 @@ export default function HomePage() {
                   </button>
 
                   {isOpen && (
-                    <div className="pt-4 pr-12 text-sm text-gray-600 font-light leading-relaxed animate-fade-in">
+                    <div className="pt-4 pr-0 text-sm text-gray-600 font-light leading-relaxed animate-fade-in sm:pr-12">
                       {item.a}
                     </div>
                   )}
@@ -438,7 +441,7 @@ export default function HomePage() {
           </div>
 
           {/* WhatsApp Support Callout */}
-          <div className="mt-12 p-8 bg-gray-50 border border-gray-200 rounded-3xl flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+          <div className="mt-12 p-5 sm:p-8 bg-gray-50 border border-gray-200 rounded-3xl flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
             <div>
               <h4 className="font-serif font-bold text-gray-950 text-xl mb-1">Still have a question?</h4>
               <p className="text-xs text-gray-500 font-light">
@@ -449,7 +452,7 @@ export default function HomePage() {
               href="https://wa.me/919876543210?text=Hi%20Cresthour%20Team%2C%20I%20have%20a%20question%20about%20the%20weekly%20webinars"
               target="_blank"
               rel="noreferrer"
-              className="px-6 py-3.5 bg-deepGreen hover:bg-deepGreen-dark text-white rounded-xl text-xs font-black uppercase tracking-[0.2em] shadow-sm transition-all flex items-center gap-2 whitespace-nowrap"
+              className="px-5 sm:px-6 py-3.5 bg-deepGreen hover:bg-deepGreen-dark text-white rounded-xl text-[10px] sm:text-xs font-black uppercase tracking-[0.12em] sm:tracking-[0.2em] shadow-sm transition-all flex items-center justify-center gap-2 text-center"
             >
               <MessageSquare size={15} /> Chat on WhatsApp
             </a>

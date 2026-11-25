@@ -145,8 +145,8 @@ export default function CheckoutModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-      <div className="w-full max-w-lg bg-white rounded-3xl p-6 sm:p-8 shadow-2xl relative border border-gray-100 max-h-[90vh] overflow-y-auto">
+    <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-2 sm:p-4">
+      <div className="w-full max-w-lg bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-2xl relative border border-gray-100 max-h-[90dvh] sm:max-h-[90vh] overflow-y-auto">
         <button
           onClick={onClose}
           className="absolute top-5 right-5 p-1.5 rounded-full bg-gray-100 text-gray-500 hover:text-black transition-colors"
@@ -161,7 +161,7 @@ export default function CheckoutModal({
               <span className="text-[10px] font-black uppercase tracking-widest text-gold bg-gold/10 px-3 py-1 rounded-full">
                 Secure Registration
               </span>
-              <h3 className="text-2xl font-serif font-bold text-gray-950 mt-2">
+              <h3 className="pr-8 text-xl sm:text-2xl font-serif font-bold text-gray-950 mt-2 break-words">
                 {displayTitle}
               </h3>
               {!isMonthlyPass && initialWebinar && (
@@ -172,11 +172,11 @@ export default function CheckoutModal({
             </div>
 
             {/* Toggle Pass / Single Webinar Option */}
-            <div className="mb-5 bg-gray-50 p-1.5 rounded-2xl border border-gray-200 grid grid-cols-2 gap-1 text-xs">
+            <div className="mb-5 bg-gray-50 p-1.5 rounded-2xl border border-gray-200 grid grid-cols-2 gap-1 text-[9px] sm:text-xs">
               <button
                 type="button"
                 onClick={() => setIsMonthlyPass(false)}
-                className={`py-2 px-3 rounded-xl font-bold uppercase tracking-wider transition-all ${
+                className={`py-2 px-1.5 sm:px-3 rounded-xl font-bold uppercase tracking-wide sm:tracking-wider transition-all ${
                   !isMonthlyPass
                     ? 'bg-white text-deepGreen shadow-sm border border-gray-200'
                     : 'text-gray-500 hover:text-black'
@@ -187,7 +187,7 @@ export default function CheckoutModal({
               <button
                 type="button"
                 onClick={() => setIsMonthlyPass(true)}
-                className={`py-2 px-3 rounded-xl font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-1 ${
+                className={`py-2 px-1.5 sm:px-3 rounded-xl font-bold uppercase tracking-wide sm:tracking-wider transition-all flex items-center justify-center gap-1 ${
                   isMonthlyPass
                     ? 'bg-deepGreen text-white shadow-sm'
                     : 'text-gray-500 hover:text-black'

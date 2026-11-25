@@ -60,7 +60,7 @@ export default function WebinarDetailPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white text-black py-10">
+    <div className="min-h-screen bg-white text-black py-7 sm:py-10">
       <div className="container-custom max-w-5xl space-y-10">
         {/* Back Link */}
         <Link
@@ -86,7 +86,7 @@ export default function WebinarDetailPage() {
             </div>
 
             <div className="space-y-4">
-              <div className="flex items-center gap-3 text-xs text-gray-500">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-xs text-gray-500">
                 <span className="flex items-center gap-1 font-semibold text-deepGreen bg-deepGreen/10 px-2.5 py-1 rounded-md">
                   <Calendar size={14} /> {webinar.date}
                 </span>
@@ -133,8 +133,8 @@ export default function WebinarDetailPage() {
           </div>
 
           {/* Checkout Card (Sticky) */}
-          <div className="lg:col-span-5 sticky top-28 space-y-4">
-            <div className="bg-white border-2 border-deepGreen/20 rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+          <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-4">
+            <div className="bg-white border-2 border-deepGreen/20 rounded-3xl p-5 sm:p-8 shadow-xl space-y-6">
               <div>
                 <span className="text-[10px] font-black uppercase tracking-widest text-gold bg-gold/10 px-3 py-1 rounded-full">
                   Registration Open
@@ -149,11 +149,11 @@ export default function WebinarDetailPage() {
               <div className="space-y-2 text-xs text-gray-600 border-t border-gray-100 pt-4">
                 <div className="flex items-center gap-2">
                   <Video size={14} className="text-deepGreen" />
-                  <span>Google Meet / Zoom Live Interactive Access</span>
+                  <span className="min-w-0">Google Meet / Zoom Live Interactive Access</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <MessageSquare size={14} className="text-deepGreen" />
-                  <span>Automated WhatsApp Link & Calendar Invite</span>
+                  <span className="min-w-0">WhatsApp session updates</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <ShieldCheck size={14} className="text-deepGreen" />

@@ -386,8 +386,8 @@ export default function AdminPage() {
 
       {/* Header */}
       <header className="border-b border-gray-200 bg-white sticky top-0 z-40 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex flex-wrap items-center justify-between gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <Link href="/" className="text-xl font-serif font-black tracking-tight text-gray-950">
               CRESTHOUR<span className="text-gold">.</span>
             </Link>
@@ -400,13 +400,13 @@ export default function AdminPage() {
             <Link
               href="/"
               target="_blank"
-              className="inline-flex items-center gap-1.5 text-xs text-gray-600 hover:text-black px-3 py-2 rounded-lg border border-gray-200 bg-white transition-colors font-medium"
+              className="inline-flex items-center gap-1.5 text-[10px] sm:text-xs text-gray-600 hover:text-black px-2.5 sm:px-3 py-2 rounded-lg border border-gray-200 bg-white transition-colors font-medium"
             >
               <Eye size={14} /> View Site
             </Link>
             <button
               onClick={handleLogout}
-              className="inline-flex items-center gap-1.5 text-xs text-red-600 hover:text-red-700 px-3 py-2 rounded-lg border border-red-200 bg-red-50 transition-colors font-semibold"
+              className="inline-flex items-center gap-1.5 text-[10px] sm:text-xs text-red-600 hover:text-red-700 px-2.5 sm:px-3 py-2 rounded-lg border border-red-200 bg-red-50 transition-colors font-semibold"
             >
               <LogOut size={14} /> Logout
             </button>
@@ -500,9 +500,9 @@ export default function AdminPage() {
           <div className="space-y-8">
             {/* Form */}
             <div className="bg-white border border-gray-200 rounded-3xl p-6 sm:p-8 shadow-sm">
-              <div className="flex items-center justify-between mb-6">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
                 <div>
-                  <h2 className="text-2xl font-serif font-bold text-gray-950 flex items-center gap-2">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-gray-950 flex items-start gap-2">
                     <PlusCircle className="w-5 h-5 text-deepGreen" />
                     {editingId ? 'Edit Webinar Details' : 'Add / Schedule Webinar for the Month'}
                   </h2>
@@ -1024,7 +1024,7 @@ export default function AdminPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {/* Cloudinary */}
               <div className="border border-gray-200 rounded-2xl p-5 space-y-3 bg-gray-50/50">
                 <div className="font-bold text-sm text-gray-950 flex items-center gap-2">

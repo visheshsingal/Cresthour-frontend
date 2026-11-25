@@ -13,12 +13,12 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black py-16">
-      <div className="container-custom max-w-4xl space-y-12">
+    <div className="min-h-screen bg-white text-black py-10 sm:py-16">
+      <div className="container-custom max-w-4xl space-y-8 sm:space-y-12">
         {/* Header */}
         <div className="text-center space-y-3">
           <span className="text-gold text-xs font-black uppercase tracking-[0.4em]">Get In Touch</span>
-          <h1 className="text-4xl sm:text-5xl font-serif font-medium text-gray-950">
+          <h1 className="text-3xl sm:text-5xl font-serif font-medium text-gray-950">
             Contact & Attendee Support
           </h1>
           <p className="text-sm text-gray-600 font-light max-w-lg mx-auto">
@@ -70,7 +70,7 @@ export default function ContactPage() {
           </div>
 
           {/* Form */}
-          <div className="md:col-span-7 bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
+          <div className="md:col-span-7 bg-white border border-gray-200 rounded-3xl p-5 sm:p-8 shadow-sm">
             {submitted ? (
               <div className="text-center py-10 space-y-3">
                 <div className="w-12 h-12 rounded-full bg-deepGreen/10 text-deepGreen flex items-center justify-center mx-auto">
