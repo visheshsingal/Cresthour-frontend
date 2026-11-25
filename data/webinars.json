@@ -1,0 +1,28 @@
+[
+  {
+    "id": "webinar-1",
+    "title": "Tech Interview Mastery: Basic Coding & Confident Soft Skills",
+    "category": "Coding & Soft Skills",
+    "date": "2026-11-28",
+    "time": "07:00 PM IST",
+    "duration": "90 Minutes",
+    "price": 199,
+    "originalPrice": 999,
+    "seatsLeft": 25,
+    "isActive": true,
+    "posterUrl": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80",
+    "meetingLink": "https://meet.google.com/abc-defg-hij",
+    "whatsappGroupLink": "https://chat.whatsapp.com/sampleInviteLink",
+    "speaker": "Vishesh & Industry Mentors",
+    "speakerRole": "Software Engineer & Career Coach",
+    "description": "A focused, interactive weekly live session designed to help students and early-career developers crack interviews with the right mix of clean coding logic and articulate communication.",
+    "topics": [
+      "Core Problem Solving & DSA logic (Arrays, Strings & Two-Pointers)",
+      "How to think out loud and articulate logic during technical interviews",
+      "Soft skills that interviewers look for: Active listening, body language, and confidence",
+      "Live Mock Interview & Resume review breakdown",
+      "Interactive Q&A and networking with peers"
+    ],
+    "createdAt": "2026-11-22T15:24:16.517Z"
+  }
+]
